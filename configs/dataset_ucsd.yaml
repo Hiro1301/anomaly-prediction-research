@@ -1,0 +1,22 @@
+dataset_name: UCSD Ped2
+root_dir: data/ucsd_ped2  # path to raw or processed data
+fps: 15
+clip_len: 16
+stride: 2
+deltas: [5, 10, 30, 60]
+splits:
+  train:
+    - "01"  # list of video IDs or file names for training
+    - "02"
+  val:
+    - "03"
+  test:
+    - "04"
+    - "05"
+annotations:
+  ground_truth: ann/ucsd_ped2_gt.json  # path to ground truth annotations
+  premonition_dir: ann/premonition_labels  # directory to save premonitory labels
+features:
+  clip_dir: features/clip
+  yolo_dir: features/yolo
+  stats_dir: features/stats
